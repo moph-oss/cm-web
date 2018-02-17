@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   doLogin() {
     if (this.username && this.password) {
-      this.router.navigate(['/apps']);
+      this.router.navigate();
     } else {
       console.log('Error');
     }
