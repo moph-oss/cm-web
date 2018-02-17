@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   username: any;
   password: any;
   isLogging: boolean = false;
-  
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -22,6 +22,10 @@ export class LoginComponent implements OnInit {
   }
 
   doLogin() {
-    this.router.navigate(['/apps']);
+    if (this.username && this.password) {
+      this.router.navigate(['/apps']);
+    } else {
+      console.log('Error');
+    }
   }
 }
